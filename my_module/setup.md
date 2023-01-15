@@ -131,7 +131,7 @@ Add the following forced include files:
 >     ],
 
 Add the following defines:
->     "defines": [,
+>     "defines": [
 >         "__KERNEL__",
 >         "MODULE",
 >         "KBUILD_BASENAME='\"${MODNAME}.mod\"'",

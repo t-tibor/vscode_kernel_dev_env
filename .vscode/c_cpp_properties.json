@@ -24,7 +24,7 @@
                 "${KDIR}/include/linux/kconfig.h",
                 "${KDIR}/include/linux/compiler_types.h"
             ],
-            "defines": [,
+            "defines": [
                 "__KERNEL__",
                 "MODULE",
                 "KBUILD_BASENAME='\"${MODNAME}.mod\"'",

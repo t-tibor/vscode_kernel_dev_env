@@ -1,0 +1,21 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.cmd": true,
+        "**/*.order": true,
+        "**/*.mod": true,
+        "**/*.o": true
+    },
+    "files.associations": {
+        "kernel.h": "c",
+        "printk.h": "c",
+        "init.h": "c",
+        "compiler.h": "c",
+        "compiler_types.h": "c"
+    }
+}

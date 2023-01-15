@@ -1,0 +1,40 @@
+{
+    "env": {
+        "KDIR" : "/home/tibi/mainline_kernel",
+        "ARCH" : "x86",
+        "MODNAME" : "my_module"
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                
+                // Kernel source dir include paths
+                "${KDIR}/arch/${ARCH}/include",
+                "${KDIR}/arch/${ARCH}/include/generated",
+                "${KDIR}/include",
+                "${KDIR}/arch/${ARCH}/include/uapi",
+                "${KDIR}/arch/${ARCH}/include/generated/uapi",
+                "${KDIR}/include/uapi",
+                "${KDIR}/include/generated/uapi"
+            ],
+            "forcedInclude": [
+                "${KDIR}/include/linux/compiler-version.h",
+                "${KDIR}/include/linux/kconfig.h",
+                "${KDIR}/include/linux/compiler_types.h"
+            ],
+            "defines": [,
+                "__KERNEL__",
+                "MODULE",
+                "KBUILD_BASENAME='\"${MODNAME}.mod\"'",
+                "KBUILD_MODNAME='\"${MODNAME}\"'",
+                "__KBUILD_MODNAME=kmod_${MODNAME}"
+            ],
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

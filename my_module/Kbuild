@@ -1,0 +1,6 @@
+obj-m += my_module.o
+
+my_module-y := my_module_main.o
+
+# Add the current directory to the include path
+ccflags-y := -I$(src)

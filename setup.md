@@ -1,14 +1,3 @@
-# Run qemu
->  runqemu qemux86-64 nographic
-
-As password use the user password of the host system.
-
-# Build the SDK
-> bitbake core
--Image-sato -c populate-sdk
-
-
-
 # Develop out-of-tree kernel module
 ## Setup the host machine
 
@@ -33,8 +22,20 @@ otherwise the module cannot contain the exact version numbers of the kernel
 it was built for. Therefore it is advised the completely build the kernel before
 starting the module development.
 
+-----------------------------------------------------------------------
+
 ### B) Use a yocto project SDK
-See above
+// TODO here
+
+Run qemu
+>  runqemu qemux86-64 nographic
+
+As password use the user password of the host system.
+
+Build the SDK
+> bitbake core-image-sato -c populate-sdk
+
+-----------------------------------------------------------------------
 
 ### C) Download using a package manager
 > apt-get install linux-headers-`uname -r`
